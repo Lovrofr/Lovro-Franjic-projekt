@@ -1,0 +1,336 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background-color: #0a3d62;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 3px solid #c0392b;
+}
+
+.logo {
+    font-family: 'Georgia', serif;
+    font-size: 42px;
+    letter-spacing: 2px;
+}
+
+.podnaslov {
+    font-size: 14px;
+    margin-top: 5px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+/* NAVIGACIJA */
+nav {
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 15px 0;
+}
+
+nav ul li a {
+    color: #0a3d62;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #c0392b;
+}
+
+/* MAIN */
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* KATEGORIJE */
+.kategorija {
+    margin-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 30px;
+}
+
+.naslov-kategorije {
+    font-size: 26px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-transform: uppercase;
+}
+
+.naslov-kategorije span {
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+}
+
+.naslov-kategorije.sport span {
+    background-color: #c0392b;
+}
+
+.naslov-kategorije.zabava span {
+    background-color: #2980b9;
+}
+
+/* ČLANCI - GRID */
+.clanci {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+article {
+    background-color: white;
+    padding: 0;
+    transition: transform 0.2s;
+}
+
+article:hover {
+    transform: translateY(-3px);
+}
+
+article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+article h3 {
+    font-family: 'Georgia', serif;
+    font-size: 22px;
+    margin: 12px 0 8px 0;
+    line-height: 1.3;
+}
+
+article h3 a {
+    color: #222;
+    text-decoration: none;
+}
+
+article h3 a:hover {
+    color: #c0392b;
+}
+
+.vrijeme {
+    font-size: 12px;
+    color: #888;
+    border-left: 2px solid #ccc;
+    padding-left: 8px;
+}
+
+/* POJEDINAČNI ČLANAK */
+.pojedinacni-clanak {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+}
+
+.kategorija-tag {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #0a3d62;
+    margin-bottom: 15px;
+}
+
+.kategorija-tag span {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+}
+
+.kategorija-tag.sport span {
+    background-color: #c0392b;
+}
+
+.kategorija-tag.zabava span {
+    background-color: #2980b9;
+}
+
+.naslov-clanka {
+    font-family: 'Georgia', serif;
+    font-size: 38px;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.sazetak {
+    font-size: 18px;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+.slika-clanka {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.datum {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.tekst-clanka p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* FORMA */
+.forma-section {
+    max-width: 700px;
+    margin: 0 auto;
+    background: white;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.naslov-forme {
+    font-family: 'Georgia', serif;
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #0a3d62;
+    border-bottom: 2px solid #c0392b;
+    padding-bottom: 10px;
+}
+
+.forma .form-item {
+    margin-bottom: 20px;
+}
+
+.forma label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #333;
+}
+
+.forma input[type="text"],
+.forma input[type="password"],
+.forma textarea,
+.forma select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.forma input[type="text"]:focus,
+.forma input[type="password"]:focus,
+.forma textarea:focus,
+.forma select:focus {
+    outline: none;
+    border-color: #0a3d62;
+}
+
+.forma input[type="file"] {
+    padding: 5px;
+}
+
+.checkbox-item label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: normal;
+}
+
+.gumbi {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.gumbi button {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.gumbi button[type="reset"] {
+    background: #ccc;
+    color: #333;
+}
+
+.gumbi button[type="reset"]:hover {
+    background: #999;
+}
+
+.gumbi button[type="submit"] {
+    background: #c0392b;
+    color: white;
+}
+
+.gumbi button[type="submit"]:hover {
+    background: #a93226;
+}
+
+/* FOOTER */
+footer {
+    background-color: #0a3d62;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .clanci {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    .naslov-clanka {
+        font-size: 26px;
+    }
+}
